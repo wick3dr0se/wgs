@@ -25,7 +25,7 @@ Download and set a random image based on quer{y,ies}
 bash wgs.sh <query> <query>
 ```
 
-Continuously download amd set images
+Continuously download and set images
 ```bash
 bash -a <interval> <query>
 ```
@@ -33,5 +33,5 @@ bash -a <interval> <query>
 Cotinuously download and set images in the background
 ```bash
 bash -a <interval> <query> & disown
-# if you run it more than once, make sure to kill the prievious process, otherwise they will stack
+# if you run it more than once, make sure to kill the previous process, otherwise they will stack
 ```
