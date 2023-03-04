@@ -2,13 +2,36 @@
 
 set -eEuo pipefail
 
-getter(){ curl -sL "$api"/?"${input// /,}" -o ~/.wgs; }
+input=
+api='https://source.unsplash.com/random'
+wallpaper='.wgs'
 
-setter(){ xwallpaper --zoom ~/.wgs; }
+hash(){ builtin hash "$1" 2>/dev/null; }
 
-[[ ${1-} == -a ]]&&{ interval="$2"; shift 2; }
+getter(){ curl -sL "$api"/?"${input%,}" -o ~/"$wallpaper"; }
 
-input="$*" api='https://source.unsplash.com/random'
+setter(){
+  if hash xwallpaper; then
+    xwallpaper --zoom ~/"$wallpaper"
+  elif hash feh; then
+    feh --bg-fill ~/"$wallpaper"
+  elif hash nitrogen; then
+    nitrogen --set-zoom-fill ~/"$wallpaper"
+  elif hash gsettings; then
+    gsettings set org.gnome.desktop.background picture-uri ~/"$wallpaper"
+  fi
+}
+
+for _; do
+  if [[ ${_%:*} == -a ]]; then
+    [[ $_ =~ : ]]&& interval="${_#*:}"
+    interval="${interval:-30}"
+  elif [[ ${_%:*} == -o ]]; then
+    wallpaper="${_#*:}"
+  else
+    input+="$_,"
+  fi
+done
 
 if (( ${interval-} )); then
   for((;;)){
