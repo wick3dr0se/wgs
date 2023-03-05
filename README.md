@@ -16,8 +16,8 @@ git clone https://github.com/wick3dr0se/wgs&& cd wgs
 
 ## Arguments
 ```bash
--a [interval]  ...  repeatedley get/set wallpapers per interval
--o <file_name>  ...  set wallpaper name to file name
+-a:[interval]  ...  repeatedley get/set wallpapers per interval
+-o:<file_name>  ...  set wallpaper name to file name
 ```
 
 *Legend*  
