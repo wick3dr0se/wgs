@@ -14,6 +14,23 @@ Download the repository
 git clone https://github.com/wick3dr0se/wgs&& cd wgs
 ```
 
+## Arguments
+```bash
+-a [interval]  ...  repeatedley get/set wallpapers per interval
+
+-o <file_name>  ...  set wallpaper name to file name
+```
+
+*Legend*  
+`[]` - optional option  
+`<>` - required argument  
+`#` - comment
+
+
+
+
+
+
 ## Usage
 Download and set a completely random image to wallpaper
 ```bash
