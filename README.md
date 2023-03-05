@@ -16,8 +16,8 @@ git clone https://github.com/wick3dr0se/wgs&& cd wgs
 
 ## Arguments
 ```bash
--a:[interval]  ...  repeatedley get/set wallpapers per interval
--o:<file_name>  ...  set wallpaper name to file name
+-a[:interval]  ...  repeatedley get/set wallpapers per interval
+-o<:file_name>  ...  set wallpaper name to file name
 ```
 
 *Legend*  
@@ -33,23 +33,23 @@ bash wgs.sh
 
 Name image output
 ```bash
-bash wgs.sh <-o:wallpaper_name>
+bash wgs.sh -o<:wallpaper_name>
 ```
 
 Download and set a random image based on quer{y,ies}
 ```bash
-bash wgs.sh <query> <query>
+bash wgs.sh <query> [query]
 ```
 
 Continuously download and set images
 ```bash
-bash -a <interval:N> <query>
+bash -a[:interval] [query]
 ```
 
 *interval will fallback to 30 seconds when -a is supplied without :N seconds*
 
 Cotinuously download and set images in the background
 ```bash
-bash -a <interval:N> <query> & disown
+bash -a:[interval] [query] & disown
 # if you run it more than once, make sure to kill the previous process, otherwise they will stack
 ```
