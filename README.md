@@ -1,6 +1,6 @@
 <div align="center">
 <h1><a href="https://github.com/wick3dr0se/wgs">wgs</a> - wallpaper getter setter</h1>
-<p>Written in pure BASH, <code>wgs</code> is minimal, fast and requires no external dependencies outside of your supported wallpaper setter choice. <code>wgs</code> utilizes Unsplash's API to return random images based on optional queries. <code>wgs</code> can repeatedly download amd set images, with common wallpaper setters, on a set interval. It can also be pushed to the background and disowned from the terminal (see below) to keep <code>wgs</code> alive, even upon closing the window</p> 
+<p>Written in pure BASH, <code>wgs</code> is minimal, fast and requires no external dependencies outside of your supported wallpaper setter choice. <code>wgs</code> utilizes Unsplash's API to return random images based on optional queries. <code>wgs</code> can repeatedly download and set images, with common wallpaper setters, on a set interval. It can also be pushed to the background and disowned from the terminal (see below) to keep <code>wgs</code> alive, even upon closing the window</p> 
 
 <img src="https://shields.io/badge/made-with%20%20bash-green?style=flat-square&color=d5c4a1&labelColor=1d2021&logo=gnu-bash">
 <img src=https://img.shields.io/badge/Maintained%3F-yes-green.svg></img>  
@@ -17,7 +17,6 @@ git clone https://github.com/wick3dr0se/wgs&& cd wgs
 ## Arguments
 ```bash
 -a [interval]  ...  repeatedley get/set wallpapers per interval
-
 -o <file_name>  ...  set wallpaper name to file name
 ```
 
@@ -25,11 +24,6 @@ git clone https://github.com/wick3dr0se/wgs&& cd wgs
 `[]` - optional option  
 `<>` - required argument  
 `#` - comment
-
-
-
-
-
 
 ## Usage
 Download and set a completely random image to wallpaper
